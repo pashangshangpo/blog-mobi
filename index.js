@@ -76,14 +76,18 @@ const processHTML = (html, url) => {
  *   outputDir: String 输出文件路径
  */
 module.exports = (name, config, outputDir) => {
-    const getArticles = config.getArticles || (() => {})
+    const getArticles = config.getArticles || (() => { })
 
     config.getArticles = res => {
-        const urlParse = url.parse(res.href)
-        const processResult = processHTML(res.content, `${urlParse.protocol}//${urlParse.host}`)
+        res = res.map(item => {
+            const urlParse = url.parse(item.href)
+            const processResult = processHTML(item.content, `${urlParse.protocol}//${urlParse.host}`)
 
-        res.content = processResult.html
-        res.imgs = processResult.imgs
+            item.content = processResult.html
+            item.imgs = processResult.imgs
+
+            return item
+        })
 
         getArticles(res)
 
