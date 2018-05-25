@@ -4,6 +4,10 @@
  * @createTime 2018年5月25日 下午8:00:27
  */
 
+const url = require('url')
+const JSDOM = require('jsdom')
+const xmlserializer = require('xmlserializer')
+const jsonToMobi = require('jsonToMobi')
 const Crawler = require('html-crawler')
 
 const processHTML = (html, url) => {
@@ -55,10 +59,16 @@ const processHTML = (html, url) => {
     }
 }
 
-module.exports = config => {
+module.exports = (name, config) => {
     const getArticles = config.getArticles
 
     config.getArticles = res => {
+        const urlParse = url.parse(res.href)
+        const processResult = processHTML(res.content, `${urlParse.protocol}//${urlParse.host}`)
+
+        res.content = processResult.content
+        res.imgs = processResult.imgs
+
         getArticles(res)
     }
 
