@@ -6,7 +6,7 @@
 
 const url = require('url')
 const { resolve } = require('path')
-const JSDOM = require('jsdom')
+const JSDOM = require('jsdom').JSDOM
 const xmlserializer = require('xmlserializer')
 const jsonToMobi = require('jsonToMobi')
 const Crawler = require('html-crawler')
