@@ -5,6 +5,7 @@
  */
 
 const url = require('url')
+const { resolve } = require('path')
 const JSDOM = require('jsdom')
 const xmlserializer = require('xmlserializer')
 const jsonToMobi = require('jsonToMobi')
@@ -66,10 +67,18 @@ module.exports = (name, config) => {
         const urlParse = url.parse(res.href)
         const processResult = processHTML(res.content, `${urlParse.protocol}//${urlParse.host}`)
 
-        res.content = processResult.content
+        res.content = processResult.html
         res.imgs = processResult.imgs
 
         getArticles(res)
+
+        jsonToMobi(
+            {
+                name: name,
+                chapters: res
+            },
+            config.outputDir || resolve('.')
+        )
     }
 
     new Crawler(config)
