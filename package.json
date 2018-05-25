@@ -6,6 +6,7 @@
   "license": "MIT",
   "dependencies": {
     "html-crawler": "https://gitee.com/pashangshangpo/html-crawler.git",
+    "jsdom": "^11.11.0",
     "jsonToMobi": "https://github.com/pashangshangpo/jsonToMobi.git",
     "xmlserializer": "^0.6.1"
   }
