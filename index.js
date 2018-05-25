@@ -8,7 +8,7 @@ const url = require('url')
 const { resolve } = require('path')
 const JSDOM = require('jsdom').JSDOM
 const xmlserializer = require('xmlserializer')
-const jsonToMobi = require('jsonToMobi')
+const jsonToMobi = require('json-to-mobi')
 const Crawler = require('html-crawler')
 
 const processHTML = (html, url) => {
