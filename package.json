@@ -1,0 +1,7 @@
+{
+  "name": "blog-mobi",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://gitee.com/pashangshangpo/blog-mobi.git",
+  "license": "MIT"
+}
