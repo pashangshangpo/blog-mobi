@@ -60,7 +60,7 @@ const processHTML = (html, url) => {
 }
 
 module.exports = (name, config) => {
-    const getArticles = config.getArticles
+    const getArticles = config.getArticles || (() => {})
 
     config.getArticles = res => {
         const urlParse = url.parse(res.href)
