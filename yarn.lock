@@ -2,6 +2,10 @@
 # yarn lockfile v1
 
 
+"html-crawler@https://gitee.com/pashangshangpo/html-crawler.git":
+  version "1.0.0"
+  resolved "https://gitee.com/pashangshangpo/html-crawler.git#ac31220032b48f305fc7df9606a3fe65f261dc72"
+
 "jsonToMobi@https://github.com/pashangshangpo/jsonToMobi.git":
   version "1.0.0"
   resolved "https://github.com/pashangshangpo/jsonToMobi.git#81cb5d4a0dd155ae1319ffa86144d9c0b5c90720"

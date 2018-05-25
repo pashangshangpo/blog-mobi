@@ -5,6 +5,7 @@
   "repository": "https://gitee.com/pashangshangpo/blog-mobi.git",
   "license": "MIT",
   "dependencies": {
+    "html-crawler": "https://gitee.com/pashangshangpo/html-crawler.git",
     "jsonToMobi": "https://github.com/pashangshangpo/jsonToMobi.git",
     "xmlserializer": "^0.6.1"
   }
