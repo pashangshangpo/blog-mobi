@@ -60,7 +60,22 @@ const processHTML = (html, url) => {
     }
 }
 
-module.exports = (name, config) => {
+/**
+ * @start-def: blogMobi: (name, config, outputDir) => undefined
+ *   name: String 名称
+ *   config: Object
+ *     pageUrls: Array
+ *       Item: String 页面URL
+ *     decode: String 解码格式 默认utf-8
+ *     getNavList: document => Array 需要返回页面导航列表
+ *       Item: Object
+ *         title: String 标题
+ *         href: String 链接
+ *     getContent: document => String 需要返回html内容
+ *     getArticles: res => undefined 获取文章列表, 最终结果
+ *   outputDir: String 输出文件路径
+ */
+module.exports = (name, config, outputDir) => {
     const getArticles = config.getArticles || (() => {})
 
     config.getArticles = res => {
@@ -77,7 +92,7 @@ module.exports = (name, config) => {
                 name: name,
                 chapters: res
             },
-            config.outputDir || resolve('.')
+            outputDir || resolve('.')
         )
     }
 
