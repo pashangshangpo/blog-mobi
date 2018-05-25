@@ -3,5 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "repository": "https://gitee.com/pashangshangpo/blog-mobi.git",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "jsonToMobi": "https://github.com/pashangshangpo/jsonToMobi.git",
+    "xmlserializer": "^0.6.1"
+  }
 }
