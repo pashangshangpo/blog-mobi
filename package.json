@@ -2,7 +2,7 @@
   "name": "blog-mobi",
   "version": "1.0.0",
   "main": "index.js",
-  "repository": "https://gitee.com/pashangshangpo/blog-mobi.git",
+  "repository": "https://github.com/pashangshangpo/blog-mobi.git",
   "license": "MIT",
   "dependencies": {
     "html-crawler": "https://github.com/pashangshangpo/html-crawler.git",
