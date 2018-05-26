@@ -3,6 +3,9 @@
 
 目前只支持mac端
 
+## 安装
+yarn add https://github.com/pashangshangpo/blog-mobi.git --save-dev
+
 ## 使用示例
 
 ```
